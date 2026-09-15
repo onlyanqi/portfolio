@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="encrypted-media=()">
+    <title>Anqi Chen — Small Digital Things</title>
+
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ANQI CHEN</div>
+            <ul class="nav-menu">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#connect">CONNECT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Theme Toggle Switch -->
+    <div class="theme-toggle-container">
+        <button 
+            class="theme-toggle" 
+            type="button"
+            role="switch"
+            aria-pressed="false"
+            aria-label="Switch to night mode"
+            tabindex="0"
+        >
+            <span class="toggle-handle"></span>
+            <span class="toggle-icons">
+                <span class="icon-day" aria-hidden="true">☀</span>
+                <span class="icon-night" aria-hidden="true">🌙</span>
+            </span>
+        </button>
+        <div class="theme-hint" id="themeHint" aria-live="polite">
+            Two sides of how I build and think.
+        </div>
+    </div>
+
+    <!-- Intro / Hero -->
+    <section id="intro" class="intro-section">
+        <div class="intro-container">
+            <div class="intro-label">INTRO 01</div>
+
+            <h1 class="intro-title">DIGITAL</h1>
+
+            <div class="intro-content">
+                <div class="intro-text">
+                    <div class="typewriter-intro">
+                        <span class="typewriter-text" id="typewriterText"></span>
+                        <span class="cursor">|</span>
+                    </div>
+
+                    <p class="intro-subtext">
+                        Small digital things, made slowly —
+                        somewhere between <strong>code</strong> and <strong>daydreams</strong>.
+                    </p>
+
+                    <a href="#works" class="discover-btn">
+                        <span class="btn-circle">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M1 6H11M11 6L6 1M11 6L6 11" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span>SEE WHAT I’M PLAYING WITH</span>
+                    </a>
+                </div>
+
+                <!-- Visual Preview -->
+                <div class="intro-preview">
+                    <div class="preview-window daydream-glow coding-workspace">
+                        <div class="preview-content">
+                            <div class="workspace-scene">
+                                <div class="desk"></div>
+                                <div class="laptop-screen">
+                                    <div class="code-lines">
+                                        <div class="code-line"></div>
+                                        <div class="code-line"></div>
+                                        <div class="code-line"></div>
+                                    </div>
+                                </div>
+                                <div class="coffee-cup"></div>
+                                <div class="plant"></div>
+                                <div class="window-light"></div>
+                            </div>
+                        </div>
+                        <div class="preview-tag">Preview</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" preload="metadata"></audio>
+
+    <!-- Now Playing Widget -->
+    <div class="now-playing-widget">
+        <div class="now-playing-content">
+            <div class="music-icon">♪</div>
+            <div class="music-info">
+                <div class="music-title">Now Playing</div>
+                <div class="music-track" id="musicTrackName">Loading…</div>
+                <div class="music-artist" id="musicArtist"></div>
+            </div>
+            <div class="music-controls">
+                <button class="music-btn prev-btn" id="prevBtn">⏮</button>
+                <button class="play-pause" id="playPauseBtn">▶</button>
+                <button class="music-btn next-btn" id="nextBtn">⏭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="about-section">
+        <div class="about-container glass-card">
+            <div class="mindset-header">
+                <div class="mindset-left">
+                    <div class="section-label">ABOUT 02</div>
+                    <h2 class="section-title">THE MINDSET</h2>
+                </div>
+                <div class="mindset-right">
+                    <p class="mindset-headline"> I enjoy building digital spaces that feel calm, gentle,
+                        and slightly  <span
+                            class="accent-text">unexpected.</span> </p>
+                    <p class="mindset-subheadline">Minimal on the surface, thoughtful underneath.</p>
+                </div>
+            </div>
+
+            <div class="two-columns">
+                <div class="column">
+                    <h3 class="column-title">THE INFLUENCE</h3>
+                    <p class="column-text">
+                        Inspired by soft symmetry, pastel worlds, quiet music,
+                        and stories that unfold slowly. I’m drawn to things that
+                        don’t ask for attention — but reward it.
+                    </p>
+                </div>
+
+                <div class="column">
+                    <h3 class="column-title">THE INTENTION</h3>
+                    <p class="column-text">
+                        This space isn’t a showcase of finished work.
+                        It’s a collection of ideas, experiments,
+                        and moments I care about.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Beyond Code -->
+            <div class="beyond-code">
+                <div class="hobbies-grid">
+                    <!-- Climbing -->
+                    <div class="hobby-item hobby-climbing">
+                        <div class="section-label">BEYOND THE CODE / 01</div>
+                        <h2 class="beyond-title">
+                            <span class="serif-title">VERTICAL</span>
+                            <span class="accent-title">PURSUITS</span>
+                        </h2>
+
+                        <div class="hobby-content">
+                            <div class="hobby-text">
+                                <p>
+                                    Climbing helps me slow down and focus.
+                                    One move at a time, one decision at a time —
+                                    very similar to how I approach creative work.
+                                </p>
+                            </div>
+
+                            <div class="hobby-image">
+                                <div class="image-placeholder climbing-sunset">
+                                    <div class="pastel-overlay overlay-pink"></div>
+                                    <div class="image-content">
+                                        <div class="climber-silhouette"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photography -->
+                    <div class="hobby-item hobby-photography">
+                        <div class="section-label">BEYOND THE CODE / 02</div>
+                        <h2 class="beyond-title">
+                            <span class="serif-title">ANALOG</span>
+                            <span class="accent-title">MEMORIES</span>
+                        </h2>
+
+                        <div class="hobby-content">
+                            <div class="hobby-text">
+                                <p>
+                                    Photography reminds me to be patient.
+                                    I enjoy the slowness of film —
+                                    choosing carefully, accepting imperfection.
+                                </p>
+                            </div>
+
+                            <div class="hobby-image">
+                                <div class="image-placeholder camera-vintage">
+                                    <div class="pastel-overlay overlay-mint"></div>
+                                    <div class="image-content">
+                                        <div class="camera-setup">
+                                            <div class="vintage-camera"></div>
+                                            <div class="polaroid polaroid-1"></div>
+                                            <div class="polaroid polaroid-2"></div>
+                                            <div class="polaroid polaroid-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works -->
+    <section id="works" class="works-section">
+        <div class="works-container glass-card">
+            <div class="works-header">
+                <h2 class="works-title">SMALL<br />DIGITAL THINGS</h2>
+                <div class="works-label">PROJECTS 03 —</div>
+            </div>
+
+            <p class="works-intro">
+                A growing collection of visual experiments, gentle tools,
+                and ideas in progress.
+            </p>
+
+            <div class="projects-grid">
+                <!-- Project 01 -->
+                <div class="project-item">
+                    <div class="project-visual">
+                        <div class="project-image-placeholder project-glow tint-pink">
+                            <div class="pastel-overlay overlay-pink"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-year">ONGOING</span>
+                            <span class="project-number">01</span>
+                        </div>
+                        <h3 class="project-title">PASTEL PLANNER</h3>
+                        <p class="project-description">
+                            A soft, visual planner inspired by bullet journals
+                            and slow mornings.
+                        </p>
+                        <span class="project-status">Experiment</span>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="project-item">
+                    <div class="project-visual">
+                        <div class="project-image-placeholder project-glow tint-mint">
+                            <div class="pastel-overlay overlay-mint"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-year">CONCEPT</span>
+                            <span class="project-number">02</span>
+                        </div>
+                        <h3 class="project-title">MOODBOARD RADIO</h3>
+                        <p class="project-description">
+                            A tiny web radio where music, color,
+                            and mood drift together.
+                        </p>
+                        <span class="project-status">Concept</span>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="project-item">
+                    <div class="project-visual">
+                        <div class="project-image-placeholder project-glow tint-lavender">
+                            <div class="pastel-overlay overlay-lavender"></div>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-year">IDEA</span>
+                            <span class="project-number">03</span>
+                        </div>
+                        <h3 class="project-title">DAILY FRAGMENTS</h3>
+                        <p class="project-description">
+                            A quiet space for small thoughts, images,
+                            and moments that don’t belong anywhere else.
+                        </p>
+                        <span class="project-status">Idea</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect -->
+    <section id="connect" class="connect-section">
+        <div class="connect-container">
+            <div class="section-label">CONNECT 04</div>
+            <h2 class="section-title">
+                LET’S MAKE<br />SOMETHING QUIET
+            </h2>
+            <p class="connect-text">
+                If something here resonates, feel free to reach out.
+            </p>
+
+            <div class="connect-links">
+                <a href="mailto:anqic7@gmail.com" class="connect-link">
+                    anqic7@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/anqichen27/" class="connect-link">LinkedIn</a>
+                <a href="https://github.com/onlyanqi/onlyanqi" class="connect-link">GitHub</a>
+            </div>
+
+            <!-- Additional Resources -->
+            <div class="connect-resources">
+                <div class="resource-card">
+                    <div class="resource-icon">📄</div>
+                    <h3 class="resource-title">Resume</h3>
+                    <p class="resource-description">Download my CV to learn more about my experience</p>
+                    <a href="/files/resume.pdf" download class="resource-link">
+                        Download PDF
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 2V12M8 12L4 8M8 12L12 8M2 14H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">📅</div>
+                    <h3 class="resource-title">Schedule a Call</h3>
+                    <p class="resource-description">Book a time to chat about projects or opportunities</p>
+                    <a href="https://calendly.com/anqic7/30min" target="_blank" rel="noopener noreferrer" class="resource-link">
+                        View Calendar
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 8H14M14 8L10 4M14 8L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">📁</div>
+                    <h3 class="resource-title">Portfolio</h3>
+                    <p class="resource-description">Complete portfolio with case studies and details</p>
+                    <a href="/files/portfolio.pdf" download class="resource-link">
+                        Download PDF
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 2V12M8 12L4 8M8 12L12 8M2 14H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
