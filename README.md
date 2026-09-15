@@ -1,26 +1,38 @@
-# portfolio
+# Anqi Chen — Portfolio
 
-Minimal personal portfolio repository. Use this repository to store website source, project notes, and deployment configs.
+A responsive, dependency-free portfolio for a software and cloud engineer. Built with HTML, CSS, and JavaScript, with a dark/amber theme, an optional light theme, expandable career entries, and a résumé download.
 
-## Status
+## Preview locally
 
-- Bootstrapped: README, .gitignore, and GitHub Actions workflow added.
+```sh
+python3 -m http.server 8080
+```
 
-## Structure
+Open http://localhost:8080. There is no build step or package installation.
 
-- `README.md` — this file
-- `.gitignore` — common ignores for macOS, Node, Python, editors
-- `.github/workflows/ci.yml` — basic CI workflow
+## Free hosting with GitHub Pages
 
-## Usage
+Target address: **https://onlyanqi.github.io/portfolio/**
 
-1. Edit or add your site source files (e.g., a frontend framework or static site files).
-2. Commit and push to `main`. The basic CI workflow will run on push and pull requests.
+1. Push the site to the `main` branch of `onlyanqi/portfolio`.
+2. In the repository, open **Settings → Pages**.
+3. Choose **Deploy from a branch**, then **main** and **/ (root)**. Save.
+4. Wait for the Pages deployment to finish, then open the address above.
 
-## Contributing
+GitHub provides the `github.io` address and HTTPS for free for public repositories. No custom domain purchase is necessary. `.nojekyll` serves the static site directly. All local asset links are relative so they work under `/portfolio/`.
 
-Open issues or submit PRs for changes. Keep commits focused and include a brief description.
+## Editing
 
-## License
+- `index.html`: biography, work experience, explorations, skills, certifications, and contact links.
+- `styles.css`: responsive layout and theme tokens.
+- `script.js`: theme preference, mobile navigation, section highlighting, footer year.
+- `files/resume.pdf`: existing résumé. Replace this file to update the download.
+- `favicon.svg`: browser icon.
 
-Add a license file if you want to open-source this repository. If you're unsure, add an `MIT` or `Apache-2.0` license.
+Career descriptions and metrics are drawn from the existing résumé. Creative projects retain their original experiment/concept/idea status; they are not presented as shipped products. Certification entries describe earned credentials, not independently verified current validity.
+
+## Validation
+
+Run `python3 scripts/check_site.py` to validate local assets, anchor targets, document structure, and deployment paths. CI runs these checks and JavaScript syntax validation on pushes and pull requests.
+
+The design takes inspiration from the typographic hierarchy, warm accent color, and professional structure of https://swetanksubham.com/, with original code, illustration, and layouts.

@@ -1,26 +1,17 @@
-name: CI
-
+name: Validate portfolio
 on:
   push:
-    branches: [ main ]
+    branches: [main, codex/portfolio-redesign]
   pull_request:
-    branches: [ main ]
-
+    branches: [main]
+permissions:
+  contents: read
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Show basic info
-        run: |
-          echo "Repository: $GITHUB_REPOSITORY"
-          echo "Ref: $GITHUB_REF"
-          echo "Listing files in repository root:"
-          ls -la
-
-      - name: Verify basic files exist
-        run: |
-          if [ -f README.md ]; then echo "README.md found"; else echo "README.md missing"; fi
-          if [ -f .gitignore ]; then echo ".gitignore found"; else echo ".gitignore missing"; fi
+      - uses: actions/checkout@v4
+      - name: Check local links and deployment paths
+        run: python3 scripts/check_site.py
+      - name: Check JavaScript syntax
+        run: node --check script.js
