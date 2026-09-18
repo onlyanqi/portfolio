@@ -13,10 +13,10 @@ Restore Anqi's original pastel palette and Playfair Display / JetBrains Mono typ
 - JetBrains Mono: navigation, dates, and brief labels.
 
 ## Layout
-A large DIGITAL masthead recalls the supplied screenshot. Beneath it, left-aligned professional introduction and the original connected-systems cube illustration in lavender and muted teal balance the technical and creative sides. Existing biography, career, explorations, skills, certifications, and contact remain; complete education is added from the new résumé.
+A large ANQI CHEN masthead uses the supplied screenshot’s typography while identifying the person immediately. Beneath it, left-aligned professional introduction and the original connected-systems cube illustration in lavender and muted teal balance the technical and creative sides. Existing biography, career, explorations, skills, certifications, and contact remain; complete education is added from the new résumé.
 
-Desktop: [name | navigation | resume + theme] / [small introduction | DIGITAL] / [intro + CTA | systems diagram] / [existing sections]
-Mobile: [name | resume + theme + menu] / [DIGITAL] / [intro] / [systems diagram] / [stacked content]
+Desktop: [name | navigation | resume + theme] / [small introduction | ANQI CHEN] / [intro + CTA | systems diagram] / [existing sections]
+Mobile: [name | resume + theme + menu] / [ANQI CHEN] / [intro] / [systems diagram] / [stacked content]
 
 ## Review against the brief
 The prior dark amber palette, Arial display, font-dependent symbols did not match the user's preferred identity. Keep the original systems illustration and its backend, cloud, reliability, design, and build labels, recolored for both palettes. Restore the requested colors and families; use one shared 24-unit SVG icon system, 44px control targets, and explicit flex alignment. Keyboard focus remains visible but uses a restrained 2px outline. The light palette is the default for this version; an intentional night palette is still available.
