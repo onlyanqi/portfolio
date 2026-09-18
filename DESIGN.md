@@ -24,3 +24,6 @@ The prior dark amber palette, Arial display, font-dependent symbols did not matc
 ## Applied skills
 - [Personal Site Skill](https://github.com/Tufeiii/Personal-Site-Skill/blob/main/SKILL.md): Mode C enhancement, grounded résumé content, preserved sections, SVG icons, responsive checks at 375/768/1440. Existing separate CSS/JS assets are retained for maintainability. Style discovery is already resolved by the user's screenshot.
 - [Anthropic frontend-design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md): brief-specific palette and typography, restrained motion, alignment discipline, visual critique.
+
+## Cinematic opening revision
+Replace the repeated oversized name with a pastel illustrated landscape in a film frame. Slow landscape drift and a soft light leak add ambient motion; a static fine-grain layer adds texture. The headline is “Somewhere between code & curiosity.” The name remains in the header, and professional content and the systems diagram stay below. A pause/play control stops both animations. Reduced-motion preferences disable animation, and the no-JavaScript default is paused. The landscape is decorative original SVG, not presented as a personal photograph.

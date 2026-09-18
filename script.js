@@ -77,5 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     document.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
   }
+  const film = document.querySelector('.film-hero');
+  const filmButton = document.querySelector('.film-toggle');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function setFilmPaused(paused) {
+    film.dataset.paused = String(paused);
+    filmButton.setAttribute('aria-pressed', String(!paused));
+    filmButton.setAttribute('aria-label', paused ? 'Play ambient motion' : 'Pause ambient motion');
+    filmButton.querySelector('span').textContent = paused ? 'Play motion' : 'Pause motion';
+  }
+  setFilmPaused(reducedMotion.matches);
+  filmButton.hidden = false;
+  filmButton.addEventListener('click', () => setFilmPaused(film.dataset.paused !== 'true'));
+  reducedMotion.addEventListener('change', event => setFilmPaused(event.matches));
   document.querySelector('#year').textContent = new Date().getFullYear();
 });

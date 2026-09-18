@@ -13,8 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <script src="script.js?v=2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -33,7 +33,30 @@
 <main id="main">
 <!-- === Hero === -->
   <section id="home" class="hero section-shell">
-    <div class="hero-title-row"><h1>ANQI CHEN</h1></div>
+    <div class="film-hero" data-paused="true">
+      <div class="film-landscape" aria-hidden="true">
+        <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="film-sky" x2="0" y2="1"><stop stop-color="#bdb9d7"/><stop offset=".55" stop-color="#ecd0d7"/><stop offset="1" stop-color="#f4d7bc"/></linearGradient>
+            <linearGradient id="film-water" x2="0" y2="1"><stop stop-color="#c5bdce"/><stop offset="1" stop-color="#acb5c6"/></linearGradient>
+            <filter id="film-haze"><feGaussianBlur stdDeviation="10"/></filter>
+          </defs>
+          <path fill="url(#film-sky)" d="M0 0h1400v600H0z"/>
+          <circle cx="1030" cy="163" r="64" fill="#fff0d5" opacity=".85"/>
+          <path d="m0 351 126-51 95 15 139-110 111 74 124-44 97 56 112-103 127 87 131-66 93 55 145-62v298H0Z" fill="#b5a8c5" opacity=".54"/>
+          <path d="m0 384 151-62 118 31 134-50 114 58 134-38 103 25 150-82 113 54 115-28 142 45 126-13v276H0Z" fill="#9f9ab6" opacity=".55"/>
+          <path d="M0 392c240-28 460 20 703 0s423-7 697 3v205H0Z" fill="url(#film-water)"/>
+          <path d="m961 404 135 0-24 130h-72Z" fill="#f9e6ce" opacity=".22" filter="url(#film-haze)"/>
+          <g stroke="#ece0e4" opacity=".3"><path d="M30 424h380m90 15h420m210-11h170M110 466h480m171 5h470M0 521h230m100 21h460m182-19h380M40 580h610m210-10h480"/></g>
+          <path d="M1140 600c76-73 158-96 260-99v99Z" fill="#7a7e94" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="film-light" aria-hidden="true"></div>
+      <div class="film-grain" aria-hidden="true"></div>
+      <div class="film-top"><span>A study in code &amp; curiosity</span><span class="film-format">35 mm / everyday observations</span></div>
+      <div class="film-title"><p>Engineering, with a creative point of view.</p><h1>Somewhere between<br>code &amp; curiosity.</h1></div>
+      <div class="film-bottom"><span class="film-caption">Reliable systems. An open mind.</span><button class="film-toggle" type="button" aria-label="Play ambient motion" aria-pressed="false" hidden><svg class="icon pause-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg><svg class="icon play-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg><span>Play motion</span></button></div>
+    </div>
     <div class="hero-grid">
       <div class="hero-copy">
         <p class="hello">Senior software developer · Toronto</p>
