@@ -1,6 +1,6 @@
 # Anqi Chen — Portfolio
 
-A responsive, dependency-free portfolio for a software and cloud engineer. Built with HTML, CSS, and JavaScript, with a dark/amber theme, an optional light theme, expandable career entries, and a résumé download.
+A responsive, dependency-free portfolio for a software and cloud engineer. Built with HTML, CSS, and JavaScript, with the original pastel palette and typography, an optional night palette, expandable career entries, and a résumé download.
 
 ## Preview locally
 
@@ -28,6 +28,7 @@ GitHub provides the `github.io` address and HTTPS for free for public repositori
 - `script.js`: theme preference, mobile navigation, section highlighting, footer year.
 - `files/resume.pdf`: existing résumé. Replace this file to update the download.
 - `favicon.svg`: browser icon.
+- `DESIGN.md`: design rationale and requested skill references.
 
 Career descriptions and metrics are drawn from the existing résumé. Creative projects retain their original experiment/concept/idea status; they are not presented as shipped products. Certification entries describe earned credentials, not independently verified current validity.
 
