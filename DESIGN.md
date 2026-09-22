@@ -27,3 +27,6 @@ The prior dark amber palette, Arial display, font-dependent symbols did not matc
 
 ## Cinematic opening revision
 Replace the repeated oversized name with a pastel illustrated landscape in a film frame. Slow landscape drift and a soft light leak add ambient motion; a static fine-grain layer adds texture. The headline is “Somewhere between code & curiosity.” The name remains in the header, and professional content and the systems diagram stay below. A pause/play control stops both animations. Reduced-motion preferences disable animation, and the no-JavaScript default is paused. The landscape is decorative original SVG, not presented as a personal photograph.
+
+## Visible scene animation
+Added drifting clouds, a flapping bird, lake ripples, and a bobbing sailboat so movement is apparent without watching for a slow camera pan. Verified changing transforms in the browser and confirmed Pause stops all six animated scene elements. Reduced-motion visitors start with a still scene and now retain an explicit Play control; opting in enables scene animation without enabling unrelated page motion.

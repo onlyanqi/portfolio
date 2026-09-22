@@ -465,5 +465,28 @@ h1 {font:400 clamp(4rem,12vw,11rem)/.95 var(--font-display);letter-spacing:-.065
 @keyframes light-drift {from {transform:translateX(-12%);opacity:.35}to {transform:translateX(12%);opacity:.85}}
 @media(max-width:900px) {.film-hero {min-height:365px;aspect-ratio:auto;margin-bottom:45px}.film-title {padding:97px 32px 95px}.film-title h1 {font-size:clamp(2.5rem,6vw,3.7rem)}.film-format {display:none}}
 @media(max-width:600px) {.film-hero {min-height:365px;margin-bottom:35px}.film-top,.film-bottom {left:18px;right:18px;gap:10px}.film-top {top:28px}.film-title {padding:89px 19px 99px}.film-title p {max-width:210px;font-size:clamp(.625rem,2.6vw,.75rem);margin-bottom:20px}.film-title h1 {font-size:clamp(1.8rem,8vw,3rem);line-height:1.22}.film-bottom {bottom:24px}.film-caption {max-width:125px;font-size:clamp(.6rem,2.5vw,.7rem)}.film-toggle span {font-size:clamp(.6rem,2.5vw,.7rem)}}
-@media(prefers-reduced-motion:reduce) {.film-landscape,.film-light {animation:none!important}.film-toggle {display:none!important}}
+@media(prefers-reduced-motion:reduce) {.film-landscape,.film-light {animation:none!important}}
 @media print {.film-hero {min-height:0;aspect-ratio:auto;background:none;box-shadow:none}.film-title {padding:20px}.film-landscape,.film-grain,.film-light,.film-top,.film-bottom,.film-hero::before,.film-hero::after {display:none}}
+
+/* Readable, visible scene motion, independent of the slow camera drift. */
+.film-cloud {animation:cloud-sail 10s ease-in-out infinite alternate}
+.cloud-far {animation-duration:14s;animation-delay:-5s}
+.film-bird {animation:bird-crossing 12s linear infinite}
+.bird-wings {transform-box:fill-box;transform-origin:center;animation:wing-beat 1.2s ease-in-out infinite alternate}
+.film-ripples {animation:lake-ripples 3s ease-in-out infinite alternate}
+.film-boat {transform-box:fill-box;transform-origin:center;animation:boat-bob 3.5s ease-in-out infinite alternate}
+.film-hero[data-paused=true] :is(.film-cloud,.film-bird,.bird-wings,.film-ripples,.film-boat) {animation-play-state:paused}
+@keyframes cloud-sail {from {transform:translateX(-70px)}to {transform:translateX(95px)}}
+@keyframes bird-crossing {0% {transform:translate(480px,155px);opacity:0}8% {opacity:.8}90% {opacity:.8}100% {transform:translate(1190px,95px);opacity:0}}
+@keyframes wing-beat {from {transform:scaleY(1)}to {transform:scaleY(-.55)}}
+@keyframes lake-ripples {from {transform:translateX(-14px);opacity:.25}to {transform:translateX(20px);opacity:.75}}
+@keyframes boat-bob {from {transform:translateY(-4px) rotate(-3deg)}to {transform:translateY(5px) rotate(3deg)}}
+/* Reduced motion starts still, but the visible Play button permits explicit opt-in. */
+@media(prefers-reduced-motion:reduce) {
+  .film-hero[data-paused=false] .film-cloud {animation:cloud-sail 10s ease-in-out infinite alternate!important}
+  .film-hero[data-paused=false] .cloud-far {animation-duration:14s!important}
+  .film-hero[data-paused=false] .film-bird {animation:bird-crossing 12s linear infinite!important}
+  .film-hero[data-paused=false] .bird-wings {animation:wing-beat 1.2s ease-in-out infinite alternate!important}
+  .film-hero[data-paused=false] .film-ripples {animation:lake-ripples 3s ease-in-out infinite alternate!important}
+  .film-hero[data-paused=false] .film-boat {animation:boat-bob 3.5s ease-in-out infinite alternate!important}
+}
