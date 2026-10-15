@@ -110,6 +110,29 @@
       <article class="project"><div class="project-art replay-art" aria-hidden="true"><svg viewBox="0 0 360 240" fill="none"><rect x="22" y="27" width="194" height="185" rx="8" fill="var(--paper)" stroke="currentColor" stroke-opacity=".2"/><text x="40" y="58" fill="currentColor" font-size="20" font-family="Georgia, serif">A second chance.</text><path d="M47 88v92" stroke="currentColor" stroke-opacity=".25"/><circle cx="47" cy="91" r="5" fill="var(--pink)" stroke="currentColor" stroke-opacity=".4"/><circle cx="47" cy="133" r="5" fill="var(--lavender)" stroke="currentColor" stroke-opacity=".4"/><circle cx="47" cy="175" r="5" fill="var(--mist)" stroke="currentColor" stroke-opacity=".4"/><g fill="currentColor" font-family="Arial, sans-serif" font-size="11"><text x="61" y="95">Acknowledgement lost</text><text x="61" y="137">Retry started</text><text x="61" y="179">Duplicate prevented</text></g><path d="M230 45h103v143l-7 5-7-5-7 5-7-5-7 5-7-5-7 5-7-5-7 5-7-5-7 5-7-5-7 5-7-5-5 5V45Z" fill="var(--paper)" stroke="currentColor" stroke-opacity=".2"/><text x="246" y="71" fill="currentColor" font-family="Arial, sans-serif" font-size="9">ONE OPERATION</text><text x="249" y="129" fill="currentColor" font-family="Georgia, serif" font-size="49">01</text><path d="M245 145h70" stroke="currentColor" stroke-opacity=".3" stroke-dasharray="3 4"/><text x="251" y="167" fill="currentColor" font-family="Arial, sans-serif" font-size="10">one receipt</text></svg><span class="art-number">03</span></div><div class="project-meta"><span>WORKING MVP · SOURCE AVAILABLE</span><span>03</span></div><h3><a href="https://github.com/onlyanqi/replay-studio" target="_blank" rel="noopener">Replay Studio ↗</a></h3><p>An interactive reliability lab. Follow real background jobs through controlled failures, automatic retries, and manual replay—while an operation receipt shows how duplicate deliveries are prevented.</p><span class="project-category">Distributed systems / Reliability / Visual explanations</span><p class="project-links"><a href="https://github.com/onlyanqi/replay-studio" target="_blank" rel="noopener">Explore the project ↗</a> · <a href="https://github.com/onlyanqi/replay-studio/blob/main/docs/reliability.md" target="_blank" rel="noopener">Read the reliability model ↗</a></p><p class="project-status">Runs locally with BullMQ and Valkey; public hosting is next.</p></article>
     </div>
   </section>
+  <!-- === Architecture case study === -->
+  <section id="case-study" class="section-shell section-block">
+    <div class="section-heading"><p class="eyebrow">ENGINEERING NOTES</p><span class="section-note">DECISIONS, TRADEOFFS &amp; EVIDENCE</span></div>
+    <div class="case-study-feature">
+      <div>
+        <p class="case-study-label">AWS ARCHITECTURE CASE STUDY</p>
+        <h2>When a retry<br>isn’t enough.</h2>
+        <p class="case-study-copy">An order is saved. Its notification is lost. I explore the gap between database writes and event delivery—and test a design that makes retries safe.</p>
+        <p class="project-category">CloudFront · API Gateway · SNS · SQS · Lambda · DynamoDB</p>
+        <a class="button" href="https://github.com/onlyanqi/aws-event-driven-case-study" target="_blank" rel="noopener">Read the case study <span aria-hidden="true">↗</span></a>
+        <p class="project-status">Illustrative AWS design · 10 local failure tests · No AWS deployment</p>
+      </div>
+      <div class="case-study-note">
+        <p class="eyebrow">FOLLOW THE FAILURE</p>
+        <ol class="case-study-flow">
+          <li><span>01</span><div><strong>Accept the order</strong><p>Save the order and its pending event together.</p></div></li>
+          <li><span>02</span><div><strong>Deliver the event</strong><p>Retry publishing with a stable event ID.</p></div></li>
+          <li><span>03</span><div><strong>Remember the result</strong><p>Record the receipt and database update atomically.</p></div></li>
+        </ol>
+        <p class="case-study-footnote">Problem → Design → Options → Change → Evidence → Next steps</p>
+      </div>
+    </div>
+  </section>
   <!-- === Skills === -->
   <section id="skills" class="section-shell section-block">
     <div class="section-heading"><p class="eyebrow">TOOLKIT</p><span class="section-note">TOOLS TO TURN IDEAS INTO SYSTEMS</span></div><h2>Technical skills</h2>
