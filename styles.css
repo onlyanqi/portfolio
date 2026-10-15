@@ -170,7 +170,7 @@ h1 {font:400 clamp(4rem,12vw,11rem)/.95 var(--font-display);letter-spacing:-.065
 .about-grid {display:grid;grid-template-columns:1fr 1fr;gap:var(--layout-gap)}
 .about-copy {color:var(--muted)}.about-copy p {margin-bottom:20px}.about-copy p:first-child {color:var(--fg)}
 .personal-notes {display:flex;flex-wrap:wrap;gap:10px 22px;font:400 var(--small)/1.8 var(--font-mono);color:var(--fg);padding-top:10px}
-.facts {display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:28px;border-top:1px solid var(--line);margin-top:42px;padding-top:27px}
+.facts {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--layout-gap);border-top:1px solid var(--line);margin-top:42px;padding-top:27px}
 .fact-label {font-size:clamp(.65rem,.8vw,.75rem);color:var(--muted)}.facts p {font-size:var(--small);margin-top:9px}.muted {font-size:var(--small);color:var(--muted)}
 /* === SECTION: Experience === */
 .section-intro {color:var(--muted);margin:20px 0 var(--content-space);max-width:64ch}
@@ -524,3 +524,16 @@ h1 {font:400 clamp(4rem,12vw,11rem)/.95 var(--font-display);letter-spacing:-.065
 .section-block .section-intro,.case-study-copy,.about-copy {font-size:var(--body);line-height:1.8}
 .certifications>.eyebrow {font-size:var(--h3);font-family:var(--font-display);letter-spacing:-.02em;text-transform:none;color:var(--fg)}
 @media(max-width:900px) and (min-width:601px) {.project-grid {grid-template-columns:1fr 1fr}}
+
+/* Equal visual summaries: education details live in the toolkit only. */
+.facts {align-items:start;padding-top:32px}
+.facts>div {min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.fact-art {display:block;width:100%;max-width:280px;height:auto;color:var(--accent);margin-bottom:20px;transition:transform .25s ease}
+.facts>div:hover .fact-art {transform:translateY(-4px)}
+.facts .fact-label {font-size:.7rem;letter-spacing:.12em}
+.facts p {font:500 clamp(1rem,1.3vw,1.2rem)/1.5 var(--font-body);margin:10px 0}
+.fact-description {display:block;max-width:29ch;font-size:var(--small);color:var(--muted);line-height:1.8}
+.skills-grid h3 {display:flex;align-items:center;gap:14px}
+.skill-icon {width:38px;height:38px;flex:0 0 38px;padding:8px;background:var(--lavender);color:var(--accent);border-radius:8px}
+.skills-grid>div:nth-child(even) .skill-icon {background:var(--mist)}
+@media(max-width:600px) {.facts {gap:32px}.fact-art {max-width:240px;margin-bottom:14px}.fact-description {max-width:34ch}}
